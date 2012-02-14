@@ -5,12 +5,6 @@
 " NOTE:         See http://tinyurl.com/remove-annoying-alert
 "               for removing the annoying security alert in Leopard.
 
-" Return all matches in for ":CocoaDoc <tab>" sorted by length.
-fun objc#man#Completion(ArgLead, CmdLine, CursorPos)
-	return system('grep -ho "^'.a:ArgLead.'\w*" ~/.vim/lib/cocoa_indexes/*.txt'.
-	            \ "| perl -e 'print sort {length $a <=> length $b} <>'")
-endf
-
 let s:docsets =  []
 let locations = [
 			\	{'path': '/Developer/Documentation/DocSets/com.apple.ADC_Reference_Library.CoreReference.docset',

@@ -3,12 +3,6 @@
 "               cocoa.vim plugin).
 " Last Updated: June 23, 2009
 
-" NOTE:    This next file (cocoa_keywords.vim) is rather large and may slow
-"          things down. Loading it seems to take less than 0.5 microseconds
-"          on my machine, but I'm not sure of the consequences; if it is slow
-"          for you, just comment out the next line.
-"ru after/syntax/cocoa_keywords.vim
-
 syn match objcDirective '@synthesize\|@dynamic\|@property' display
 syn match objcDirective '@optional\|@required' display
 syn match objcDirective '@autoreleasepool' display

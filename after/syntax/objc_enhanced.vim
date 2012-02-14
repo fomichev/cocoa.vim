@@ -7,9 +7,14 @@
 "          things down. Loading it seems to take less than 0.5 microseconds
 "          on my machine, but I'm not sure of the consequences; if it is slow
 "          for you, just comment out the next line.
-ru after/syntax/cocoa_keywords.vim
+"ru after/syntax/cocoa_keywords.vim
 
-syn match objcDirective '@synthesize\|@property\|@optional\|@required' display
+syn match objcDirective '@synthesize\|@dynamic\|@property' display
+syn match objcDirective '@optional\|@required' display
+syn match objcDirective '@autoreleasepool' display
+
+syn match objcPropertyAttribute 'strong\|weak\|atomic\|nonatomic\|readonly\|readwrite' display
+
 syn keyword objcType IBOutlet IBAction Method
 syn keyword objcConstant YES NO TRUE FALSE
 
@@ -57,3 +62,5 @@ hi link objcSubclass objcMethodName
 hi link objcSuperclass String
 
 hi link objcError Error
+
+hi link objcPropertyAttribute Type

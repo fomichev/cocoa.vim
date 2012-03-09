@@ -7,7 +7,7 @@ Quickly install with:
 
 Remove annoying "is a web application downloaded from the internet" prompt with:
 
-	cd /Library/Developer/Shared/Documentation/DocSets
+	cd ~/Library/Developer/Shared/Documentation/DocSets
 	sudo xattr -rd com.apple.quarantine *.docset
 
 To allow custom Cmd-b key binding (to issue 'Build' in the Xcode), put the following in the .gvimrc:
